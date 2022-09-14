@@ -14,8 +14,7 @@ export class GameManager extends cc.Component {
     label: cc.Label = null;
     @property
     TotalCoins: number = 0;
-    @property
-    coin:number =0;
+    
     // LIFE-CYCLE CALLBACKS:
 
     // onLoad () {}
