@@ -4,7 +4,7 @@
 //  - https://docs.cocos.com/creator/2.4/manual/en/scripting/reference/attributes.html
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/2.4/manual/en/scripting/life-cycle-callbacks.html
-
+import{Prefab, instantiate, Component, getComponent } from 'cc';
 const {ccclass, property} = cc._decorator;
 
 @ccclass('GameManager')
@@ -14,19 +14,41 @@ export class GameManager extends cc.Component {
     label: cc.Label = null;
     @property
     TotalCoins: number = 0;
+    @property(cc.Node)
+    public MainPanel: Node = null;
+    @property(cc.Node)
+    public ResultPanel: Node = null;
     
+    static instance: GameManager = null;
     // LIFE-CYCLE CALLBACKS:
 
-    // onLoad () {}
+    onLoad () {
+        GameManager.instance = this;
+    }
     
     start () {
-        this.label.string = this.TotalCoins;
+        this.ResultPanel.active = false;
+        //this.label.string = this.TotalCoins;
+        
     }
     
     updateCoinText(coin: number){
         this.TotalCoins += coin;
-        this.label.string = this.TotalCoins.toString;
+        this.label.string = "Congratulation, You Won \n" + this.TotalCoins + " Coins!";
+        
+        this.MainPanel.active = false;
+        this.ResultPanel.active = true;
+        
+        //cc.find("Canvas/CoinText").active = false;
     }
    
+    reset(){
+        this.TotalCoins = 0;
+        this.label.string = "";
+        this.MainPanel.active = true;
+        this.ResultPanel.active = false;
+    }
+    
+    
     // update (dt) {}
 }

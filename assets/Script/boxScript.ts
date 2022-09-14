@@ -10,14 +10,12 @@ const {ccclass, property} = cc._decorator;
 
 @ccclass
 export default class boxScript extends cc.Component {
-
-_gameManager:GameManager = new GameManager();
     @property
     coinValue: number = 0;
 
     onclick(){
         console.log("this coin value is : "+this.coinValue);
         //this.test(this.coinValue);
-        this._gameManager.updateCoinText(Number(this.coinValue));
+        GameManager.instance.updateCoinText(this.coinValue);
     }
 }
