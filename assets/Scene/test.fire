@@ -84,10 +84,10 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 47
+        "__id__": 48
       },
       {
-        "__id__": 48
+        "__id__": 49
       }
     ],
     "_prefab": null,
@@ -1300,7 +1300,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 46
+        "__id__": 47
       }
     ],
     "_prefab": null,
@@ -1833,7 +1833,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "GameManager",
+    "_name": "Game_Manager",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -1843,6 +1843,9 @@
     "_components": [
       {
         "__id__": 45
+      },
+      {
+        "__id__": 46
       }
     ],
     "_prefab": null,
@@ -1912,6 +1915,16 @@
       "__id__": 33
     },
     "_id": "2fSZ5PT65AIaV2Y4iQOod2"
+  },
+  {
+    "__type__": "8ff57WMLj9N75UnmJE7S4hV",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 44
+    },
+    "_enabled": true,
+    "_id": "cd99MP261JFaW/okAKaJDq"
   },
   {
     "__type__": "cc.Sprite",

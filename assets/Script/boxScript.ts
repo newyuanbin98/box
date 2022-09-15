@@ -15,7 +15,7 @@ export default class boxScript extends cc.Component {
 
     onclick(){
         console.log("this coin value is : "+this.coinValue);
-        //this.test(this.coinValue);
+        //this.test(this.coinValue)
         GameManager.instance.updateCoinText(this.coinValue);
     }
 }
