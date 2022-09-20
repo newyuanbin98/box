@@ -5,6 +5,7 @@
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/2.4/manual/en/scripting/life-cycle-callbacks.html
 
+import { GameManager }from './GameManager';
 const {ccclass, property} = cc._decorator;
 
 class Items{
@@ -40,7 +41,10 @@ export default class ResultList extends cc.Component {
         }
        
         //console.log("items = "+ item.name + item.id);
-        console.log(this.loadJsonFile(item));
+        let itemString = this.loadJsonFile(item);
+        
+        GameManager.instance.testJsonString = itemString;
+        //console.log(this.loadJsonFile(item));
         
         
     }

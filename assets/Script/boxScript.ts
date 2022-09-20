@@ -9,9 +9,9 @@ import { GameManager }from './GameManager';
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class boxScript extends cc.Component {
+export class boxScript extends cc.Component {
     @property
-    coinValue: number = 0;
+    public coinValue: number = 0;
 
     onclick(){
         console.log("this coin value is : "+this.coinValue);
