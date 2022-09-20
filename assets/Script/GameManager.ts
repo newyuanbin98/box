@@ -4,7 +4,7 @@
 //  - https://docs.cocos.com/creator/2.4/manual/en/scripting/reference/attributes.html
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/2.4/manual/en/scripting/life-cycle-callbacks.html
-import{Prefab, instantiate, Component, getComponent } from 'cc';
+import{Prefab, instantiate, Component } from 'cc';
 import { boxScript } from './boxScript';
 import { GetResults } from './GetResults';
 const {ccclass, property} = cc._decorator;
@@ -51,8 +51,8 @@ export class GameManager extends cc.Component {
         //cc.find("Canvas/CoinText").active = false;
     }
     
-    ClickOnBox(){
-        this.Boxes[0].getComponent(boxScript).onclick();
+    ClickOnBox(event: Event, customEventData: number){
+        this.Boxes[customEventData].getComponent(boxScript).onclick();
         //bscript.onclick();
         //console.log("Click on Box: "+ bscript.coinValue);
         
