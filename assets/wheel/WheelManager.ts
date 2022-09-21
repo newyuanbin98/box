@@ -43,7 +43,7 @@ export default class WheelManager extends cc.Component {
         console.log("start spinning for "+this.spinDuration +" second(s)");
         this.isSpinning = true;
         this.WheelObj.runAction(cc.rotateTo(this.spinDuration,this.stopSpinAngle(this.sideStopNumber)));
-        setTimeout(function() {
+        setTimeout(()=> {
             console.log("finish spinning");
             this.isSpinning = false;
             console.log("spinning state after timeout = "+this.isSpinning);
