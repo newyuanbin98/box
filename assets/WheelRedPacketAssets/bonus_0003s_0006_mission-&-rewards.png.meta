@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "ed1b0dee-ed84-4f1f-9896-c67ca88ceab5",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 352,
+  "height": 398,
+  "platformSettings": {},
+  "subMetas": {
+    "bonus_0003s_0006_mission-&-rewards": {
+      "ver": "1.0.6",
+      "uuid": "06a16c6a-27e0-447d-8ba3-552d2163be36",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "ed1b0dee-ed84-4f1f-9896-c67ca88ceab5",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 352,
+      "height": 398,
+      "rawWidth": 352,
+      "rawHeight": 398,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

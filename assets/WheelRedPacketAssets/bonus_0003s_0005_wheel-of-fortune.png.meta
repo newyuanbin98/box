@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "f39e3dea-049c-466a-a5be-6262dd8744cf",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 352,
+  "height": 398,
+  "platformSettings": {},
+  "subMetas": {
+    "bonus_0003s_0005_wheel-of-fortune": {
+      "ver": "1.0.6",
+      "uuid": "1c317615-2a8a-4d3b-aaab-f2091a9da36d",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "f39e3dea-049c-466a-a5be-6262dd8744cf",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 352,
+      "height": 398,
+      "rawWidth": 352,
+      "rawHeight": 398,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
