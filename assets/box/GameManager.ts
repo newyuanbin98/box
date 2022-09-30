@@ -73,7 +73,7 @@ export class GameManager extends cc.Component {
     }
     
     showResult(){
-        let randNum = cc.math.randomRangeInt(500,200000000);;
+        let randNum = cc.math.randomRangeInt(500,2000000);
         this.spawnNumberNode(randNum);
     }
     
@@ -101,12 +101,12 @@ export class GameManager extends cc.Component {
         let totalSpace = 0;
         for(let i = totalCoins.toString().length - 1; i >= 0; i--){
             commaCount++;
-            if(commaCount==4||commaCount==7){//spawn comma node
+            if(commaCount == 4 || commaCount == 7){//spawn comma node
                 this.Comma_node.getComponent(cc.Sprite).spriteFrame = this.Numbers[10];
                 let node = cc.instantiate(this.Comma_node);
                 node.parent = parentNode;
-                let Pos = -((totalCoins.toString().length-1-i)*this.coin_distBtwn)-commaSpace+10;
-                node.setPosition(Pos,-10,0);
+                let Pos = -((totalCoins.toString().length-1-i)*this.coin_distBtwn)-commaSpace+15;
+                node.setPosition(Pos,-15,0);
                 commaSpace += 50;
             }
             
@@ -120,7 +120,7 @@ export class GameManager extends cc.Component {
                 totalSpace = -Pos;
         }
         
-        parentNode.setPosition(totalSpace/2,0,0);
+        parentNode.setPosition(totalSpace/2, 0, 0);
     }
     
     // update (dt) {}

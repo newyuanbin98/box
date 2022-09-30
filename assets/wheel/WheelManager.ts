@@ -57,7 +57,11 @@ export default class WheelManager extends cc.Component {
     }
     
     SpinWheelButtonClick(event: Event, customEventData: number){
-        console.log("spinning state in spin wheel click= "+this.isSpinning);
+        //console.log("spinning state in spin wheel click= "+this.isSpinning);
+        let randNum = cc.math.randomRangeInt(1,this.rouletteSides);
+        customEventData = randNum;
+        console.log("generated random winning number = "+randNum);
+        
         if(!this.isSpinning)
         {
             console.log("going to start spinning");
