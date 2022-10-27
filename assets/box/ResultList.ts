@@ -51,7 +51,7 @@ export default class ResultList extends cc.Component {
     
     loadJsonFile(jsonObj:any){
         let jsonString = JSON.stringify(jsonObj);
-        console.log("jsonString" + jsonString);
+        //console.log("jsonString" + jsonString);
         
         let jsonItem = new Items;
         jsonItem = JSON.parse(jsonString);

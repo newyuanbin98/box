@@ -1,6 +1,7 @@
 {
   "excludeScenes": [
-    "2d2f792f-a40c-49bb-a189-ed176a246e49"
+    "2d2f792f-a40c-49bb-a189-ed176a246e49",
+    "604bd22e-ce27-4af1-a287-b2ce0d658b91"
   ],
   "orientation": {
     "landscapeLeft": true,
@@ -10,7 +11,7 @@
   },
   "packageName": "org.cocos2d.helloworld",
   "startScene": "66418aed-657a-4190-ab00-4c1866b033f8",
-  "title": "Box_demo",
+  "title": "Red_Packet",
   "webOrientation": "auto",
   "inlineSpriteFrames": true,
   "inlineSpriteFrames_native": true,

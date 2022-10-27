@@ -53,10 +53,10 @@ export class GameManager extends cc.Component {
         
     }
     
-    updateCoinText(coin: number){
-        this.TotalCoins += coin;
-        this.label.string = "Congratulation, You Won \n" + this.TotalCoins + " Coins!";
-        this.testLabel.string = this.testJsonString;
+    updateCoinText(){
+        //this.TotalCoins += coin;
+        //this.label.string = "Congratulation, You Won \n" + this.TotalCoins + " Coins!";
+        //this.testLabel.string = this.testJsonString;
         
         this.MainPanel.active = false;
         this.ResultPanel.active = true;
@@ -73,8 +73,9 @@ export class GameManager extends cc.Component {
     }
     
     showResult(){
-        let randNum = cc.math.randomRangeInt(500,2000000);
-        this.spawnNumberNode(randNum);
+        //let randNum = cc.math.randomRangeInt(500,2000000);
+        console.log("THIS value = "+this.getValueFromURL());
+        this.spawnNumberNode(this.getValueFromURL());
     }
     
     reset(){
@@ -121,6 +122,16 @@ export class GameManager extends cc.Component {
         }
         
         parentNode.setPosition(totalSpace/2, 0, 0);
+    }
+    
+    getValueFromURL()
+    {
+        var url_string = window.location.href;
+        var url = new URL(url_string);
+        var c = url.searchParams.get("v");
+        console.log("value v from url = "+c);
+        
+        return c;
     }
     
     // update (dt) {}
