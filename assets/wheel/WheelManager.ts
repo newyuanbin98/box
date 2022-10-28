@@ -41,7 +41,7 @@ export default class WheelManager extends cc.Component {
     public Comma_node: Node;
     @property()
     public coin_distBtwn: number = 0;
-    private coin_amount_won:number =0;
+    private coin_amount_won:number;
     // LIFE-CYCLE CALLBACKS:
 
     // onLoad () {}
@@ -64,6 +64,8 @@ export default class WheelManager extends cc.Component {
             this.isSpinning = false;
             this.MainPanel.active = true;
             this.ResultPanel.active = true;
+            console.log("amount coin won = "+this.coin_amount_won);
+            
             this.spawnNumberNode(this.coin_amount_won);
             console.log("spinning state after timeout = "+this.isSpinning);
         },this.spinDuration*1000+2000);
@@ -128,12 +130,15 @@ export default class WheelManager extends cc.Component {
     
     getValueFromURL()
     {
-        var url_string = window.location.href;
+        var url_string = window.location.href//"https://leonggame-server.online/arjs/bonus/roulette/game?v=14";
         var url = new URL(url_string);
         var c = url.searchParams.get("v");
+        //var c = 6;
         console.log("value v from url = "+c);
+        var side:number = Number(c);
+        console.log("C convert into number = "+side);
         
-        switch (c) {
+        switch (side) {
             case 1:this.coin_amount_won = 3333;
                 break;
             case 2:this.coin_amount_won = 888;
@@ -166,10 +171,11 @@ export default class WheelManager extends cc.Component {
                 break;
             case 16:this.coin_amount_won = 18888;
                 break;
-            default:this.coin_amount_won = 0;
+            default:this.coin_amount_won = 0;console.log("error on getting C from url");
                 break;
         }
         
+        console.log("coin amount after switch case = "+this.coin_amount_won);
         return c;
     }
     
@@ -180,6 +186,8 @@ export default class WheelManager extends cc.Component {
         
         this.MainPanel.active = true;
         this.ResultPanel.active = false;
+        
+        console.log("coin amount after reset = "+this.coin_amount_won); 
     }
     // trySpin(obj: Node){
     //     cc.tween(obj)
