@@ -41,6 +41,7 @@ export default class WheelManager extends cc.Component {
     public Comma_node: Node;
     @property()
     public coin_distBtwn: number = 0;
+    private coin_amount_won:number =0;
     // LIFE-CYCLE CALLBACKS:
 
     // onLoad () {}
@@ -63,7 +64,7 @@ export default class WheelManager extends cc.Component {
             this.isSpinning = false;
             this.MainPanel.active = true;
             this.ResultPanel.active = true;
-            this.spawnNumberNode(this.getValueFromURL());
+            this.spawnNumberNode(this.coin_amount_won);
             console.log("spinning state after timeout = "+this.isSpinning);
         },this.spinDuration*1000+2000);
        console.log("spinning state before timeout = "+this.isSpinning);
@@ -76,9 +77,10 @@ export default class WheelManager extends cc.Component {
     
     SpinWheelButtonClick(event: Event, customEventData: number){
         //console.log("spinning state in spin wheel click= "+this.isSpinning);
-        let randNum = cc.math.randomRangeInt(1,this.rouletteSides);
+        //let randNum = cc.math.randomRangeInt(1,this.rouletteSides);
+        let randNum = this.getValueFromURL();
         customEventData = randNum;
-        console.log("generated random winning number = "+randNum);
+        console.log("getValueFromURL winning number = "+randNum);
         
         if(!this.isSpinning)
         {
@@ -131,10 +133,48 @@ export default class WheelManager extends cc.Component {
         var c = url.searchParams.get("v");
         console.log("value v from url = "+c);
         
+        switch (c) {
+            case 1:this.coin_amount_won = 3333;
+                break;
+            case 2:this.coin_amount_won = 888;
+                break;
+            case 3:this.coin_amount_won = 2222;
+                break;
+            case 4:this.coin_amount_won = 20000;//2%jackpot
+                break;
+            case 5:this.coin_amount_won = 333;
+                break;
+            case 6:this.coin_amount_won = 5555;
+                break;
+            case 7:this.coin_amount_won = 60000;//6%jackpot
+                break;
+            case 8:this.coin_amount_won = 666;
+                break;
+            case 9:this.coin_amount_won = 7777;
+                break;
+            case 10:this.coin_amount_won = 8888;
+                break;
+            case 11:this.coin_amount_won = 30000;//3%jackpot
+                break;
+            case 12:this.coin_amount_won = 6666;
+                break;
+            case 13:this.coin_amount_won = 4444;
+                break;
+            case 14:this.coin_amount_won = 555;
+                break;
+            case 15:this.coin_amount_won = 1888;
+                break;
+            case 16:this.coin_amount_won = 18888;
+                break;
+            default:this.coin_amount_won = 0;
+                break;
+        }
+        
         return c;
     }
     
     reset(){
+        this.coin_amount_won = 0;
         this.isSpinning = false;
         this.coinNum_parent.removeAllChildren();
         
