@@ -11,7 +11,7 @@
   },
   "packageName": "org.cocos2d.helloworld",
   "startScene": "66418aed-657a-4190-ab00-4c1866b033f8",
-  "title": "Red_Packet",
+  "title": "Roulette",
   "webOrientation": "auto",
   "inlineSpriteFrames": true,
   "inlineSpriteFrames_native": true,
